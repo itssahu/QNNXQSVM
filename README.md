@@ -4,7 +4,7 @@ This repository presents a comprehensive benchmarking study comparing the robust
 
 ---
 
-## 1. 🎯 Objective
+## 1. Objective
 
 - Analyze and compare QNN and QSVM performance on **multiclass classification**.
 - Systematically inject **Gaussian noise** at levels from **10% to 100%**.
@@ -18,7 +18,7 @@ This repository presents a comprehensive benchmarking study comparing the robust
 
 ---
 
-## 2. 📊 Dataset
+## 2. Dataset
 
 - **Name**: Iris dataset (`sklearn.datasets.load_iris`)
 - **Classes**: 3 (Setosa, Versicolor, Virginica)
@@ -27,7 +27,7 @@ This repository presents a comprehensive benchmarking study comparing the robust
 
 ---
 
-## 3. 🧪 Experimental Design
+## 3. Experimental Design
 
 ### Noise Injection
 Each experiment perturbs features with Gaussian noise:
@@ -62,7 +62,7 @@ X_noisy = X_clean + np.random.normal(0, noise_level × X.std(), X.shape)
 
 ---
 
-## 4. 📌 Results by Noise Level
+## 4.  Results by Noise Level
 
 ### 🔹 10% Noise
 
@@ -136,7 +136,7 @@ QNN maintains **>80% accuracy** up to 60% noise, while QSVM drops to ~30% quickl
 
 ---
 
-## 6. ⏱️ Execution Time vs Noise Level
+## 6.  Execution Time vs Noise Level
 
 - QSVM executes in ~4–5s across all noise levels.
 - QNN execution varies (35–100s), due to iterative optimization.
@@ -175,7 +175,7 @@ python src/train_qnn_qsvm.py
 ```
 .
 ├── src/
-│   └── train_qnn_qsvm.ipynb
+│   └── QNNXQSVM.ipynb
 ├── requirements.txt
 └── README.md
 ```
