@@ -72,7 +72,8 @@ X_noisy = X_clean + np.random.normal(0, noise_level × X.std(), X.shape)
 | PCA: Overlap in clusters         | PCA: Well-separated clusters     |
 | Kernel: Diagonal but noisy       | Weights: Balanced and smooth     |
 
-![noise10](results/10_percent.png)
+![image](https://github.com/user-attachments/assets/3b1fe19e-ecac-42c6-b8ba-9d6678025f42)
+
 
 ---
 
@@ -81,7 +82,8 @@ X_noisy = X_clean + np.random.normal(0, noise_level × X.std(), X.shape)
 - QSVM misclassifies both Versicolor and Virginica.
 - QNN: Slight confusion (1 misclassification); high accuracy.
 
-![noise30](results/30_percent.png)
+![image](https://github.com/user-attachments/assets/39c2799d-5b49-49b1-9d35-d8093e2611d5)
+
 
 ---
 
@@ -90,7 +92,8 @@ X_noisy = X_clean + np.random.normal(0, noise_level × X.std(), X.shape)
 - QSVM accuracy nearly collapses to ~40%, large confusion between classes.
 - QNN maintains over 90% accuracy, PCA still shows separation.
 
-![noise50](results/50_percent.png)
+![image](https://github.com/user-attachments/assets/9d4200cd-d685-48f6-aa84-46a6cc8ffadd)
+
 
 ---
 
@@ -99,7 +102,8 @@ X_noisy = X_clean + np.random.normal(0, noise_level × X.std(), X.shape)
 - QSVM shows noisy PCA and indistinct clusters.
 - QNN confusion matrix shows 2 errors total.
 
-![noise70](results/70_percent.png)
+
+![image](https://github.com/user-attachments/assets/0cef5256-ae7b-49f7-a7c3-9cf0471d2c16)
 
 ---
 
@@ -108,7 +112,8 @@ X_noisy = X_clean + np.random.normal(0, noise_level × X.std(), X.shape)
 - QSVM: Kernel matrix highly noisy; PCA fully overlapping.
 - QNN: Accuracy drops but remains significantly better.
 
-![noise90](results/90_percent.png)
+![image](https://github.com/user-attachments/assets/13e9ab76-37ec-4e88-a38a-08bf20a37dfd)
+
 
 ---
 
@@ -117,7 +122,8 @@ X_noisy = X_clean + np.random.normal(0, noise_level × X.std(), X.shape)
 - QSVM performance close to random guessing.
 - QNN still distinguishes structure using entangling layer.
 
-![noise100](results/100_percent.png)
+![image](https://github.com/user-attachments/assets/d0cd9d53-5248-48fc-970d-a449a1daf573)
+
 
 ---
 
@@ -125,7 +131,8 @@ X_noisy = X_clean + np.random.normal(0, noise_level × X.std(), X.shape)
 
 QNN maintains **>80% accuracy** up to 60% noise, while QSVM drops to ~30% quickly.
 
-![accuracy](results/accuracy_vs_noise.png)
+![image](https://github.com/user-attachments/assets/f33c89e8-2f33-4531-92c9-17cc434f77b2)
+
 
 ---
 
@@ -134,7 +141,8 @@ QNN maintains **>80% accuracy** up to 60% noise, while QSVM drops to ~30% quickl
 - QSVM executes in ~4–5s across all noise levels.
 - QNN execution varies (35–100s), due to iterative optimization.
 
-![time](results/time_vs_noise.png)
+![image](https://github.com/user-attachments/assets/ca45d12e-815d-480c-8857-a4a95be2d5e8)
+
 
 ---
 
@@ -167,13 +175,7 @@ python src/train_qnn_qsvm.py
 ```
 .
 ├── src/
-│   └── train_qnn_qsvm.py
-├── results/
-│   ├── 10_percent.png
-│   ├── 30_percent.png
-│   ├── ...
-│   ├── accuracy_vs_noise.png
-│   └── time_vs_noise.png
+│   └── train_qnn_qsvm.ipynb
 ├── requirements.txt
 └── README.md
 ```
